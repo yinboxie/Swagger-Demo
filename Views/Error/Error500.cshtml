@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+			   body{
+			   	   font-family: "微软雅黑";
+			   }
+			 .content{
+			 	width: 460px;
+			 	margin: 80px auto 0;
+			 }
+			 .img-500{
+			 	 width: 440px;
+			 	 height: 417px;
+			 }
+			 .content-txt{
+			 	font-size: 20px;
+			 	text-align: center;
+			 }
+			 .btn-next,.btn-check{
+			 	 width: 100px;
+			 	 height:35px;
+			 	 text-align: center;
+			 	 line-height: 35px;
+			 	 font-size: 16px;
+			 	 color: white;
+			 	 border-radius: 5px;
+			 	 cursor: pointer;
+			 }
+			 .btn-group{
+			 	display: flex;
+				justify-content: center;
+				margin-top: 35px;
+			  }
+			 .btn-next{
+			 	background: rgb(252,109,97);
+			 	margin-right: 60px;
+			 }
+			 .btn-check{
+			 	background:rgb(0,151,190);
+
+			 }
+			 .errors{
+			 	margin-top: 30px;
+			 	display: none;
+			 }
+			 table{
+			  border-spacing: 0;
+			  width: 100%;
+			 }
+			 table tbody tr td{
+			 	 border: 1px solid black;
+			 	 border-right: none;
+			 	 border-bottom:none;
+			 	 text-align: center;
+			 }
+			 table tbody tr td:last-child{
+			 	border-right: 1px solid black;
+                text-align:left;
+			 }
+			 table tbody tr:last-child td{
+			 	border-bottom:1px solid black;
+
+			 }
+
+    </style>
+</head>
+<body style="background:white">
+    <div class="content">
+        <img src="~/Content/images/500.png" class="img-500" />
+        <p class="content-txt">您操作出现故障了，请联系管理员</p>
+        <div class="btn-group">
+            <div class="btn-next" onclick="javascript: history.go(-1)">
+                返回上级
+            </div>
+            <div class="btn-check">
+                查看详情
+            </div>
+        </div>   
+    </div>
+    <div class="errors" style="width:700px;margin:10px auto 0;">
+        <table>
+            <tbody>
+                <tr>
+                    <td><div style="width:100px">请求路径</div></td>
+                    <td>@Model.Path</td>
+                </tr>
+                <tr>
+                    <td>异常发生时间</td>
+                    <td>@Model.Time</td>
+                </tr>
+                <tr>
+                    <td>IP地址</td>
+                    <td>@Model.IP</td>
+                </tr>
+                <tr>
+                    <td>客户端浏览器</td>
+                    <td>@Model.UserAgent</td>
+                </tr>
+                <tr>
+                    <td>异常方法</td>
+                    <td>@Model.Method</td>
+                </tr>
+                <tr>
+                    <td>程序集</td>
+                    <td>@Model.Assembly</td>
+                </tr>
+                <tr>
+                    <td>异常内容</td>
+                    <td>@Model.Message</td>
+                </tr>
+                <tr>
+                    <td>堆栈</td>
+                    <td>@Model.StackTrace</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+		 	     var $check= document.getElementsByClassName("btn-check")[0]; //document.querySelectorAll(".btn-check");
+		 	     var $errors = document.getElementsByClassName("errors")[0];
+		 	     var $content = document.getElementsByClassName("content")[0];
+		 	     var $img500 = document.getElementsByClassName("img-500")[0];
+		 	       $check.onclick=function(){
+		 	          $errors.style.display="block"
+		 	       }
+		 	       if(window.screen.width<640){
+		 	       	  var meta=document.createElement("meta");
+		 	       	  meta.name="viewport";
+		 	       	  meta.content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no";
+		 	       	  document.head.appendChild(meta);
+		 	       	  $content.style.width = "326px";
+		 	       	  $content.style.margin = " 20px auto 0";
+		 	       	  $img500.style.width = "327px";
+		 	       	  $img500.style.height = "318px";
+		 	       }
+    </script>
+</body>
+</html>

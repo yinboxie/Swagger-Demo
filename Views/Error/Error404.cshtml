@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+			   body{
+			   	   font-family: "微软雅黑";
+			   }
+			 .content{
+			 	width: 400px;
+			 	margin: 80px auto 0;
+			 }
+			 .img-400{
+			 	 width: 400px;
+			 	 height:456px;
+			 }
+			 .content-txt{
+			 	font-size: 22px;
+			 	text-align: center;
+			 }
+    </style>
+</head>
+<body style="background:white;">
+    <div class="content">
+        <img src="~/Content/images/404.png" class="img-400" />
+        <p class="content-txt">您所访问的页面不存在！！</p>
+        <p style="text-align: center;font-size: 16px;">@ViewBag.ErrorUrl</p>
+    </div>
+    <script>
+        var $content = document.getElementsByClassName("content")[0];
+        var $img400 = document.getElementsByClassName("img-400")[0];
+		 		 if(window.screen.width<640){
+		 	       	  var meta=document.createElement("meta");
+		 	       	  meta.name="viewport";
+		 	       	  meta.content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no";
+		 	       	  document.head.appendChild(meta);
+		 	       	  $content.style.width = "320px";
+		 	       	  $content.style.margin = " 20px auto 0";
+		 	       	  $img400.style.width = "320px";
+		 	       	  $img400.style.height = "400px";
+		 	      }
+    </script>
+</body>
+</html>

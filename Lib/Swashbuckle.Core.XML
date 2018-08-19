@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Swashbuckle.Core</name>
+    </assembly>
+    <members>
+        <member name="F:Swashbuckle.Application.InfoBuilder._isDefaultRoute">
+            <summary>
+            是否默认路由
+            </summary>
+        </member>
+        <member name="F:Swashbuckle.Application.SwaggerDocsConfig.ShowDeveloper">
+            <summary>
+            是否显示开发者信息
+            </summary>
+        </member>
+        <member name="M:Swashbuckle.Application.SwaggerDocsConfig.ShowDeveloperInfo">
+            <summary>
+            显示开发者信息
+            </summary>
+        </member>
+        <member name="T:Swashbuckle.Swagger.Annotations.ApiAuthorAttribute">
+            <summary>
+            Api作者信息
+            </summary>
+        </member>
+        <member name="P:Swashbuckle.Swagger.Annotations.ApiAuthorAttribute.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Swashbuckle.Swagger.Annotations.ApiAuthorAttribute.Time">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:Swashbuckle.Swagger.Annotations.ApiAuthorAttribute.Status">
+            <summary>
+            开发状态
+            </summary>
+        </member>
+        <member name="M:Swashbuckle.Swagger.Annotations.ApiAuthorAttribute.GetStatusName">
+            <summary>
+            获取开发状态名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Swashbuckle.Swagger.Annotations.DevStatus">
+            <summary>
+            开发状态
+            </summary>
+        </member>
+        <member name="F:Swashbuckle.Swagger.Annotations.DevStatus.None">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:Swashbuckle.Swagger.Annotations.DevStatus.Wait">
+            <summary>
+            等待开发
+            </summary>
+        </member>
+        <member name="F:Swashbuckle.Swagger.Annotations.DevStatus.Dev">
+            <summary>
+            开发中
+            </summary>
+        </member>
+        <member name="F:Swashbuckle.Swagger.Annotations.DevStatus.Finish">
+            <summary>
+            开发完成
+            </summary>
+        </member>
+        <member name="F:Swashbuckle.Swagger.SwaggerDocument.muiltVersion">
+            <summary>
+            多版本
+            </summary>
+        </member>
+        <member name="F:Swashbuckle.Swagger.Info.docPath">
+            <summary>
+            文档路径
+            </summary>
+        </member>
+        <member name="F:Swashbuckle.Swagger.Info.isDefaultRoute">
+            <summary>
+            是否默认路由
+            </summary>
+        </member>
+        <member name="F:Swashbuckle.Swagger.Operation.description">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Swashbuckle.Swagger.Operation.devStatus">
+            <summary>
+            开发状态
+            </summary>
+        </member>
+        <member name="P:Swashbuckle.Swagger.Operation.devStatusName">
+            <summary>
+            开发状态名称
+            </summary>
+        </member>
+        <member name="P:Swashbuckle.Swagger.Operation.developer">
+            <summary>
+            开发者
+            </summary>
+        </member>
+        <member name="P:Swashbuckle.Swagger.Operation.modifyDate">
+            <summary>
+            修改日期
+            </summary>
+        </member>
+        <member name="P:Swashbuckle.Swagger.Operation.showDevStatus">
+            <summary>
+            是否显示开发状态
+            </summary>
+        </member>
+        <member name="M:Swashbuckle.Swagger.SwaggerGenerator.SetTags(Swashbuckle.Swagger.SwaggerDocument,System.Collections.Generic.IEnumerable{Swashbuckle.Swagger.IModelFilter},System.Collections.Generic.List{System.String})">
+            <summary>
+            设置标签
+            </summary>
+            <param name="swaggerDoc"></param>
+            <param name="modelFilters"></param>
+            <param name="keys"></param>
+        </member>
+        <member name="M:Swashbuckle.Swagger.XmlComments.ApplyXmlActionComments.ApplyDeveloperInfo(Swashbuckle.Swagger.Operation,System.Web.Http.Description.ApiDescription)">
+            <summary>
+            加入开发者信息
+            </summary>
+            <param name="operation"></param>
+            <param name="apiDescription"></param>
+        </member>
+        <member name="M:Swashbuckle.Swagger.XmlComments.XmlTextHelper.NormalizeIndentation(System.String)">
+            <summary>
+            Messages text from an XML node produced by Visual Studio into a plainer plain text (leading whitespace normalized)
+            </summary>
+            <param name="xmlText">The content of an XML node - could contain other XML elements within the string</param>
+            <returns></returns>
+        </member>
+        <member name="M:Swashbuckle.Swagger.XmlComments.XmlTextHelper.GetCommonLeadingWhitespace(System.String[])">
+            <summary>
+            Finds the common padding prefix used on all non-empty lines.
+            </summary>
+            <param name="lines"></param>
+            <returns>The common padding found on all non-blank lines - returns null when no common prefix is found</returns>
+        </member>
+    </members>
+</doc>
